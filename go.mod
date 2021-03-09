@@ -7,8 +7,11 @@ require (
 	github.com/globalsign/mgo v0.0.0-20181015135952-eeefdecb41b8
 	github.com/golang/protobuf v1.4.2
 	github.com/google/gops v0.3.14
+	github.com/gorilla/websocket v1.4.2
+	github.com/kardianos/osext v0.0.0-20190222173326-2bc1f35cddc0 // indirect
+	github.com/shirou/w32 v0.0.0-20160930032740-bb4de0191aa4 // indirect
 	github.com/stretchr/testify v1.7.0
-	github.com/tal-tech/go-zero v1.1.4
+	github.com/tal-tech/go-zero v1.1.6-0.20210309133045-1a1a6f523938
 	golang.org/x/net v0.0.0-20210119194325-5f4716e94777
 	google.golang.org/grpc v1.31.0
 	gopkg.in/cheggaaa/pb.v1 v1.0.28
