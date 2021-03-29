@@ -9,8 +9,8 @@ import (
 	"time"
 
 	"github.com/tal-tech/go-zero/core/conf"
-	"github.com/tal-tech/go-zero/example/tracing/remote/user"
 	"github.com/tal-tech/go-zero/zrpc"
+	"github.com/zeromicro/zero-examples/tracing/remote/user"
 	"google.golang.org/grpc"
 )
 

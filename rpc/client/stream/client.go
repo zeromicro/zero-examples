@@ -8,8 +8,8 @@ import (
 	"sync"
 
 	"github.com/tal-tech/go-zero/core/discov"
-	"github.com/tal-tech/go-zero/example/rpc/remote/stream"
 	"github.com/tal-tech/go-zero/zrpc"
+	"github.com/zeromicro/zero-examples/rpc/remote/stream"
 )
 
 const name = "kevin"

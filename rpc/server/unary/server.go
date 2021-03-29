@@ -10,8 +10,8 @@ import (
 	"time"
 
 	"github.com/tal-tech/go-zero/core/conf"
-	"github.com/tal-tech/go-zero/example/rpc/remote/unary"
 	"github.com/tal-tech/go-zero/zrpc"
+	"github.com/zeromicro/zero-examples/rpc/remote/unary"
 	"google.golang.org/grpc"
 )
 

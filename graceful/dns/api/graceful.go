@@ -4,11 +4,11 @@ import (
 	"flag"
 
 	"github.com/tal-tech/go-zero/core/conf"
-	"github.com/tal-tech/go-zero/example/graceful/dns/api/config"
-	"github.com/tal-tech/go-zero/example/graceful/dns/api/handler"
-	"github.com/tal-tech/go-zero/example/graceful/dns/api/svc"
 	"github.com/tal-tech/go-zero/rest"
 	"github.com/tal-tech/go-zero/zrpc"
+	"github.com/zeromicro/zero-examples/graceful/dns/api/config"
+	"github.com/zeromicro/zero-examples/graceful/dns/api/handler"
+	"github.com/zeromicro/zero-examples/graceful/dns/api/svc"
 )
 
 var configFile = flag.String("f", "etc/graceful-api.json", "the config file")

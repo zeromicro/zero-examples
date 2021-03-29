@@ -8,8 +8,8 @@ import (
 	"time"
 
 	"github.com/tal-tech/go-zero/core/conf"
-	"github.com/tal-tech/go-zero/example/graceful/dns/rpc/graceful"
 	"github.com/tal-tech/go-zero/zrpc"
+	"github.com/zeromicro/zero-examples/graceful/dns/rpc/graceful"
 	"google.golang.org/grpc"
 )
 

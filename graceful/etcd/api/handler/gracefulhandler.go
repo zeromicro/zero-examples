@@ -9,10 +9,10 @@ import (
 
 	"github.com/tal-tech/go-zero/core/executors"
 	"github.com/tal-tech/go-zero/core/logx"
-	"github.com/tal-tech/go-zero/example/graceful/etcd/api/svc"
-	"github.com/tal-tech/go-zero/example/graceful/etcd/api/types"
-	"github.com/tal-tech/go-zero/example/graceful/etcd/rpc/graceful"
 	"github.com/tal-tech/go-zero/rest/httpx"
+	"github.com/zeromicro/zero-examples/graceful/etcd/api/svc"
+	"github.com/zeromicro/zero-examples/graceful/etcd/api/types"
+	"github.com/zeromicro/zero-examples/graceful/etcd/rpc/graceful"
 )
 
 func gracefulHandler(ctx *svc.ServiceContext) http.HandlerFunc {
