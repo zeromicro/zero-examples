@@ -11,7 +11,7 @@ require (
 	github.com/kardianos/osext v0.0.0-20190222173326-2bc1f35cddc0 // indirect
 	github.com/shirou/w32 v0.0.0-20160930032740-bb4de0191aa4 // indirect
 	github.com/stretchr/testify v1.7.0
-	github.com/tal-tech/go-zero v1.1.6-0.20210309133045-1a1a6f523938
+	github.com/tal-tech/go-zero v1.1.6
 	golang.org/x/net v0.0.0-20210119194325-5f4716e94777
 	google.golang.org/grpc v1.31.0
 	gopkg.in/cheggaaa/pb.v1 v1.0.28
