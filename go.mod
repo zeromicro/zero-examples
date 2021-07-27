@@ -11,8 +11,8 @@ require (
 	github.com/stretchr/testify v1.7.0
 	github.com/tal-tech/go-zero v1.1.8
 	golang.org/x/net v0.0.0-20210614182718-04defd469f4e
-	google.golang.org/grpc v1.38.0
+	google.golang.org/grpc v1.39.0
 	gopkg.in/cheggaaa/pb.v1 v1.0.28
 )
 
-replace google.golang.org/grpc => google.golang.org/grpc v1.29.1
+// replace google.golang.org/grpc => google.golang.org/grpc v1.29.1
