@@ -8,7 +8,7 @@ import (
 )
 
 type TimeHolder struct {
-	Date time.Time `json:"date"`
+	Date string `json:"date"`
 }
 
 func main() {
