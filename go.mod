@@ -9,10 +9,8 @@ require (
 	github.com/google/gops v0.3.14
 	github.com/gorilla/websocket v1.4.2
 	github.com/stretchr/testify v1.7.0
-	github.com/tal-tech/go-zero v1.1.8
-	golang.org/x/net v0.0.0-20210614182718-04defd469f4e
+	github.com/tal-tech/go-zero v1.1.11-0.20210909100627-5cc9eb0de4f3
+	golang.org/x/net v0.0.0-20210716203947-853a461950ff
 	google.golang.org/grpc v1.39.0
 	gopkg.in/cheggaaa/pb.v1 v1.0.28
 )
-
-// replace google.golang.org/grpc => google.golang.org/grpc v1.29.1

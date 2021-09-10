@@ -1,0 +1,2 @@
+Name: client
+Target: k8s://adhoc/server:3456

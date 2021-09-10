@@ -11,30 +11,34 @@ import (
 	"github.com/zeromicro/zero-examples/rpc/remote/unary"
 )
 
-var configFile = flag.String("f", "config.json", "the config file")
+const timeFormat = "15:04:05"
+
+var config = flag.String("f", "etc/config.yaml", "config file")
 
 func main() {
 	flag.Parse()
 
 	var c zrpc.RpcClientConf
-	conf.MustLoad(*configFile, &c)
+	conf.MustLoad(*config, &c)
 	client := zrpc.MustNewClient(c)
-	ticker := time.NewTicker(time.Millisecond * 500)
+	ticker := time.NewTicker(time.Second)
 	defer ticker.Stop()
+
 	for {
 		select {
 		case <-ticker.C:
 			conn := client.Conn()
 			greet := unary.NewGreeterClient(conn)
-			resp, err := greet.Greet(context.Background(), &unary.Request{
+			ctx, cancel := context.WithTimeout(context.Background(), time.Second)
+			resp, err := greet.Greet(ctx, &unary.Request{
 				Name: "kevin",
 			})
 			if err != nil {
-				fmt.Println("X", err.Error())
+				fmt.Printf("%s X %s\n", time.Now().Format(timeFormat), err.Error())
 			} else {
-				fmt.Println("=>", resp.Greet)
+				fmt.Printf("%s => %s\n", time.Now().Format(timeFormat), resp.Greet)
 			}
-			break
+			cancel()
 		}
 	}
 }

@@ -30,7 +30,6 @@ func NewGreetServer() *GreetServer {
 }
 
 func (gs *GreetServer) Greet(ctx context.Context, req *unary.Request) (*unary.Response, error) {
-	panic("oops")
 	fmt.Println("=>", req)
 
 	hostname, err := os.Hostname()
@@ -38,7 +37,6 @@ func (gs *GreetServer) Greet(ctx context.Context, req *unary.Request) (*unary.Re
 		return nil, err
 	}
 
-	time.Sleep(time.Minute)
 	return &unary.Response{
 		Greet: "hello from " + hostname,
 	}, nil
