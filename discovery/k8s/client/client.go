@@ -13,7 +13,7 @@ import (
 
 const timeFormat = "15:04:05"
 
-var config = flag.String("f", "etc/config.yaml", "config file")
+var config = flag.String("f", "etc/k8s.yaml", "config file")
 
 func main() {
 	flag.Parse()

@@ -15,7 +15,7 @@ import (
 	"google.golang.org/grpc"
 )
 
-var configFile = flag.String("f", "etc/config.json", "the config file")
+var configFile = flag.String("f", "etc/k8s.yaml", "the config file")
 
 type GreetServer struct {
 	lock     sync.Mutex
