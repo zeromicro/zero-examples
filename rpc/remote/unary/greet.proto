@@ -13,5 +13,3 @@ message Response {
 service Greeter {
     rpc greet(Request) returns (Response);
 }
-
-
