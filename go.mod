@@ -4,7 +4,9 @@ go 1.15
 
 require (
 	github.com/dchest/siphash v1.2.2
+	github.com/docker/spdystream v0.0.0-20160310174837-449fdfce4d96 // indirect
 	github.com/globalsign/mgo v0.0.0-20181015135952-eeefdecb41b8
+	github.com/go-openapi/spec v0.19.3 // indirect
 	github.com/golang/protobuf v1.5.2
 	github.com/google/gops v0.3.14
 	github.com/gorilla/websocket v1.4.2
