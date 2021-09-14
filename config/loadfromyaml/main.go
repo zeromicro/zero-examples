@@ -1,8 +1,6 @@
 package main
 
 import (
-	"time"
-
 	"github.com/tal-tech/go-zero/core/conf"
 	"github.com/tal-tech/go-zero/core/logx"
 )

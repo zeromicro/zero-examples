@@ -4,11 +4,10 @@ import (
 	"flag"
 	"net/http"
 
-	"zero-examples/chat/internal"
-
 	"github.com/tal-tech/go-zero/core/logx"
 	"github.com/tal-tech/go-zero/core/service"
 	"github.com/tal-tech/go-zero/rest"
+	"github.com/zeromicro/zero-examples/chat/internal"
 )
 
 var (

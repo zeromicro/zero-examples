@@ -327,10 +327,8 @@ github.com/stretchr/testify v1.5.1/go.mod h1:5W2xD1RspED5o8YsWQXVCued0rvSQ+mT+I5
 github.com/stretchr/testify v1.6.1/go.mod h1:6Fq8oRcR53rry900zMqJjRRixrwX3KX962/h/Wwjteg=
 github.com/stretchr/testify v1.7.0 h1:nwc3DEeHmmLAfoZucVR881uASk0Mfjw8xYJ99tb5CcY=
 github.com/stretchr/testify v1.7.0/go.mod h1:6Fq8oRcR53rry900zMqJjRRixrwX3KX962/h/Wwjteg=
-github.com/tal-tech/go-zero v1.2.0 h1:btgmgoo9vMiCDAKbVlFWRO5IYayDAQde3Qvax3oyPM0=
-github.com/tal-tech/go-zero v1.2.0/go.mod h1:RYnuQARhUG2FpvEx1RYTN1k5LLypoT2vO+MaoxQ5HSY=
-github.com/tal-tech/go-zero v1.2.1-0.20210913034907-71c0288023df h1:uorEIDFPrMU6uqCr4fdJZvae5qFUkD843yajGlZF6Oc=
-github.com/tal-tech/go-zero v1.2.1-0.20210913034907-71c0288023df/go.mod h1:j62w0m/h/HGZEb42ims1m+4jVZc7610QR7eZDVyCuXY=
+github.com/tal-tech/go-zero v1.2.1 h1:WH507LpqtdSniIIekwcIogQvyMDDY/F8EwWyAhZz3pE=
+github.com/tal-tech/go-zero v1.2.1/go.mod h1:j62w0m/h/HGZEb42ims1m+4jVZc7610QR7eZDVyCuXY=
 github.com/urfave/cli v1.22.5/go.mod h1:Gos4lmkARVdJ6EkW0WaNv/tZAAMe9V7XWyB60NtXRu0=
 github.com/xlab/treeprint v1.0.0/go.mod h1:IoImgRak9i3zJyuxOKUP1v4UZd1tMoKkq/Cimt1uhCg=
 github.com/yuin/goldmark v1.1.27/go.mod h1:3hX8gzYuyVAZsxl0MRgGTJEmQBFcNTphYh9decYSb74=
