@@ -6,23 +6,22 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/tal-tech/go-zero/core/discov"
+	"github.com/tal-tech/go-zero/core/conf"
 	"github.com/tal-tech/go-zero/zrpc"
 	"github.com/zeromicro/zero-examples/rpc/remote/unary"
 )
 
 const timeFormat = "15:04:05"
 
+var configFile = flag.String("f", "config.yaml", "the config file")
+
 func main() {
 	flag.Parse()
 
-	client := zrpc.MustNewClient(zrpc.RpcClientConf{
-		Etcd: discov.EtcdConf{
-			Hosts: []string{"localhost:2379"},
-			Key:   "zrpc",
-		},
-	})
+	var c zrpc.RpcClientConf
+	conf.MustLoad(*configFile, &c)
 
+	client := zrpc.MustNewClient(c)
 	ticker := time.NewTicker(time.Second)
 	defer ticker.Stop()
 	for {
