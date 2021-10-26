@@ -1,0 +1,6 @@
+Name: server
+ListenOn: 0.0.0.0:3453
+
+Consul:
+  Host: 192.168.100.15:8500
+  Key: consul.rpc

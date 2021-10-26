@@ -1,0 +1,2 @@
+Name: client
+Target: consul://192.168.100.15:8500/consul.rpc?wait=14s
