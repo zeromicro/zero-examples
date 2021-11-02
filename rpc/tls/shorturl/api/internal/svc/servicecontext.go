@@ -7,11 +7,11 @@ import (
 	"io/ioutil"
 	"log"
 
-	"github.com/tal-tech/go-zero/adhoc/shorturl/api/internal/config"
-	"github.com/tal-tech/go-zero/adhoc/shorturl/rpc/transform/transformer"
-	"google.golang.org/grpc/credentials"
+	"shorturl/api/internal/config"
+	"shorturl/rpc/transform/transformer"
 
 	"github.com/tal-tech/go-zero/zrpc"
+	"google.golang.org/grpc/credentials"
 )
 
 type ServiceContext struct {

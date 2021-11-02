@@ -3,9 +3,10 @@ package main
 import (
 	"flag"
 
-	"github.com/tal-tech/go-zero/adhoc/shorturl/api/internal/config"
-	"github.com/tal-tech/go-zero/adhoc/shorturl/api/internal/handler"
-	"github.com/tal-tech/go-zero/adhoc/shorturl/api/internal/svc"
+	"shorturl/api/internal/config"
+	"shorturl/api/internal/handler"
+	"shorturl/api/internal/svc"
+
 	"github.com/tal-tech/go-zero/core/conf"
 	"github.com/tal-tech/go-zero/core/logx"
 	"github.com/tal-tech/go-zero/rest"

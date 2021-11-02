@@ -9,10 +9,11 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/tal-tech/go-zero/adhoc/shorturl/rpc/transform/internal/config"
-	"github.com/tal-tech/go-zero/adhoc/shorturl/rpc/transform/internal/server"
-	"github.com/tal-tech/go-zero/adhoc/shorturl/rpc/transform/internal/svc"
-	transform "github.com/tal-tech/go-zero/adhoc/shorturl/rpc/transform/pb"
+	"shorturl/rpc/transform/internal/config"
+	"shorturl/rpc/transform/internal/server"
+	"shorturl/rpc/transform/internal/svc"
+	transform "shorturl/rpc/transform/pb"
+
 	"github.com/tal-tech/go-zero/core/conf"
 	"github.com/tal-tech/go-zero/core/logx"
 	"github.com/tal-tech/go-zero/zrpc"

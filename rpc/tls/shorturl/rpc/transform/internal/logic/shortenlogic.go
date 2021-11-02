@@ -3,9 +3,10 @@ package logic
 import (
 	"context"
 
-	"github.com/tal-tech/go-zero/adhoc/shorturl/rpc/transform/internal/svc"
-	"github.com/tal-tech/go-zero/adhoc/shorturl/rpc/transform/model"
-	transform "github.com/tal-tech/go-zero/adhoc/shorturl/rpc/transform/pb"
+	"shorturl/rpc/transform/internal/svc"
+	"shorturl/rpc/transform/model"
+	transform "shorturl/rpc/transform/pb"
+
 	"github.com/tal-tech/go-zero/core/hash"
 	"github.com/tal-tech/go-zero/core/logx"
 )

@@ -1,8 +1,9 @@
 package svc
 
 import (
-	"github.com/tal-tech/go-zero/adhoc/shorturl/rpc/transform/internal/config"
-	"github.com/tal-tech/go-zero/adhoc/shorturl/rpc/transform/model"
+	"shorturl/rpc/transform/internal/config"
+	"shorturl/rpc/transform/model"
+
 	"github.com/tal-tech/go-zero/core/stores/sqlx"
 )
 

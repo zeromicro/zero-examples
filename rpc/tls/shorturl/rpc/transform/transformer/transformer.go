@@ -8,7 +8,8 @@ package transformer
 import (
 	"context"
 
-	transform "github.com/tal-tech/go-zero/adhoc/shorturl/rpc/transform/pb"
+	transform "shorturl/rpc/transform/pb"
+
 	"github.com/tal-tech/go-zero/core/jsonx"
 	"github.com/tal-tech/go-zero/zrpc"
 )

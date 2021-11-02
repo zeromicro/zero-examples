@@ -6,9 +6,9 @@ package server
 import (
 	"context"
 
-	"github.com/tal-tech/go-zero/adhoc/shorturl/rpc/transform/internal/logic"
-	"github.com/tal-tech/go-zero/adhoc/shorturl/rpc/transform/internal/svc"
-	transform "github.com/tal-tech/go-zero/adhoc/shorturl/rpc/transform/pb"
+	"shorturl/rpc/transform/internal/logic"
+	"shorturl/rpc/transform/internal/svc"
+	transform "shorturl/rpc/transform/pb"
 )
 
 type TransformerServer struct {

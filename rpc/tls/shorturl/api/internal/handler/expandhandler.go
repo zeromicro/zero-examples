@@ -3,9 +3,10 @@ package handler
 import (
 	"net/http"
 
-	"github.com/tal-tech/go-zero/adhoc/shorturl/api/internal/logic"
-	"github.com/tal-tech/go-zero/adhoc/shorturl/api/internal/svc"
-	"github.com/tal-tech/go-zero/adhoc/shorturl/api/internal/types"
+	"shorturl/api/internal/logic"
+	"shorturl/api/internal/svc"
+	"shorturl/api/internal/types"
+
 	"github.com/tal-tech/go-zero/rest/httpx"
 )
 
