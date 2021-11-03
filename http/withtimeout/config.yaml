@@ -1,0 +1,4 @@
+Name: timeout
+Host: 0.0.0.0
+Port: 3333
+Timeout: 3000
