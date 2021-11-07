@@ -3,15 +3,16 @@ package main
 import (
 	"flag"
 	"fmt"
+	"io"
+	"io/ioutil"
+	"net/http"
+	"os"
+
 	"github.com/tal-tech/go-zero/core/logx"
 	"github.com/tal-tech/go-zero/core/service"
 	"github.com/tal-tech/go-zero/rest"
 	"github.com/tal-tech/go-zero/rest/httpx"
 	"github.com/zeromicro/zero-examples/http/signature/internal"
-	"io"
-	"io/ioutil"
-	"net/http"
-	"os"
 )
 
 type Request struct {
@@ -42,13 +43,13 @@ func main() {
 			},
 		},
 		Verbose: true,
-		Port: 3333,
+		Port:    3333,
 		Signature: rest.SignatureConf{
 			Strict: true,
 			PrivateKeys: []rest.PrivateKeyConf{
 				{
 					Fingerprint: internal.Fingerprint,
-					KeyFile:    priFile,
+					KeyFile:     priFile,
 				},
 			},
 		},
@@ -64,7 +65,6 @@ func main() {
 	fmt.Println("start server...")
 	engine.Start()
 }
-
 
 func createTempFile(body []byte) (string, error) {
 	tmpFile, err := ioutil.TempFile(os.TempDir(), "go-unit-*.tmp")

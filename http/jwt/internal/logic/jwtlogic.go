@@ -26,7 +26,7 @@ func NewJwtLogic(ctx context.Context, svcCtx *svc.ServiceContext) JwtLogic {
 }
 
 func (l *JwtLogic) Jwt(req types.JwtTokenRequest) (*types.JwtTokenResponse, error) {
-	var accessExpire = l.svcCtx.Config.JwtAuth.AccessExpire
+	accessExpire := l.svcCtx.Config.JwtAuth.AccessExpire
 
 	now := time.Now().Unix()
 	accessToken, err := l.GenToken(now, l.svcCtx.Config.JwtAuth.AccessSecret, nil, accessExpire)
@@ -39,7 +39,6 @@ func (l *JwtLogic) Jwt(req types.JwtTokenRequest) (*types.JwtTokenResponse, erro
 		AccessExpire: now + accessExpire,
 		RefreshAfter: now + accessExpire/2,
 	}, nil
-
 }
 
 func (l *JwtLogic) GenToken(iat int64, secretKey string, payloads map[string]interface{}, seconds int64) (string, error) {

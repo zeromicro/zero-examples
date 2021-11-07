@@ -6,8 +6,6 @@ import (
 	"encoding/base64"
 	"flag"
 	"fmt"
-	"github.com/tal-tech/go-zero/core/codec"
-	"github.com/zeromicro/zero-examples/http/signature/internal"
 	"io"
 	"log"
 	"net/http"
@@ -15,13 +13,12 @@ import (
 	"strconv"
 	"strings"
 	"time"
+
+	"github.com/tal-tech/go-zero/core/codec"
+	"github.com/zeromicro/zero-examples/http/signature/internal"
 )
 
-
-
-var (
-	crypt = flag.Bool("crypt", false, "encrypt body or not")
-)
+var crypt = flag.Bool("crypt", false, "encrypt body or not")
 
 func hs256(key []byte, body string) string {
 	h := hmac.New(sha256.New, key)
