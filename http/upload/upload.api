@@ -1,0 +1,8 @@
+type Response {
+	OK int `json:"ok"`
+}
+
+service upload-api {
+	@handler UploadHandler
+	post /upload returns (Response)
+}
