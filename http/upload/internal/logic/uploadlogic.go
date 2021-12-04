@@ -5,6 +5,7 @@ import (
 	"io/ioutil"
 	"net/http"
 	"os"
+	"path"
 
 	"upload/internal/svc"
 	"upload/internal/types"
@@ -41,19 +42,18 @@ func (l *UploadLogic) Upload() (resp *types.Response, err error) {
 	fmt.Printf("File Size: %+v\n", handler.Size)
 	fmt.Printf("MIME Header: %+v\n", handler.Header)
 
-	tempFile, err := os.Create(handler.Filename)
-	if err != nil {
-		fmt.Println(err)
-		return nil, err
-	}
-	defer tempFile.Close()
-
 	fileBytes, err := ioutil.ReadAll(file)
 	if err != nil {
 		fmt.Println(err)
 		return nil, err
 	}
 
+	tempFile, err := os.Create(path.Join(l.svcCtx.Config.Path, handler.Filename))
+	if err != nil {
+		fmt.Println(err)
+		return nil, err
+	}
+	defer tempFile.Close()
 	tempFile.Write(fileBytes)
 
 	return &types.Response{
