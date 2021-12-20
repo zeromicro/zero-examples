@@ -20,3 +20,5 @@
 # vim auto backup file
 *~
 !OWNERS
+
+.vscode/
