@@ -2,9 +2,8 @@
 package handler
 
 import (
-	"net/http"
-
 	"bookstore/api/internal/svc"
+	"net/http"
 
 	"github.com/tal-tech/go-zero/rest"
 )

@@ -71,7 +71,6 @@ func productDetail(uid, pid int64) (*ProductDetail, error) {
 		pd.Order, err = orderRpc.Order(pid)
 		return
 	})
-
 	if err != nil {
 		return nil, err
 	}

@@ -7,10 +7,10 @@ import (
 	"flag"
 	"fmt"
 	"log"
-
 	"shorturl/rpc/transform/internal/config"
 	"shorturl/rpc/transform/internal/server"
 	"shorturl/rpc/transform/internal/svc"
+
 	transform "shorturl/rpc/transform/pb"
 
 	"github.com/tal-tech/go-zero/core/conf"

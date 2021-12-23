@@ -3,7 +3,6 @@ package handler
 
 import (
 	"net/http"
-
 	"upload/internal/svc"
 
 	"github.com/tal-tech/go-zero/rest"

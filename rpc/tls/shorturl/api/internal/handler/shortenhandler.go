@@ -2,7 +2,6 @@ package handler
 
 import (
 	"net/http"
-
 	"shorturl/api/internal/logic"
 	"shorturl/api/internal/svc"
 	"shorturl/api/internal/types"

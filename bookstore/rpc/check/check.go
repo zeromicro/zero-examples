@@ -4,13 +4,12 @@
 package main
 
 import (
-	"flag"
-	"fmt"
-
 	"bookstore/rpc/check/check"
 	"bookstore/rpc/check/internal/config"
 	"bookstore/rpc/check/internal/server"
 	"bookstore/rpc/check/internal/svc"
+	"flag"
+	"fmt"
 
 	"github.com/tal-tech/go-zero/core/conf"
 	"github.com/tal-tech/go-zero/core/logx"

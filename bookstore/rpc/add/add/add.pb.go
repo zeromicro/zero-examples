@@ -8,14 +8,15 @@ package add
 
 import (
 	context "context"
+	reflect "reflect"
+	sync "sync"
+
 	proto "github.com/golang/protobuf/proto"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
-	reflect "reflect"
-	sync "sync"
 )
 
 const (
@@ -158,11 +159,14 @@ func file_add_proto_rawDescGZIP() []byte {
 	return file_add_proto_rawDescData
 }
 
-var file_add_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
-var file_add_proto_goTypes = []interface{}{
-	(*AddReq)(nil),  // 0: add.addReq
-	(*AddResp)(nil), // 1: add.addResp
-}
+var (
+	file_add_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
+	file_add_proto_goTypes  = []interface{}{
+		(*AddReq)(nil),  // 0: add.addReq
+		(*AddResp)(nil), // 1: add.addResp
+	}
+)
+
 var file_add_proto_depIdxs = []int32{
 	0, // 0: add.adder.add:input_type -> add.addReq
 	1, // 1: add.adder.add:output_type -> add.addResp
@@ -225,8 +229,10 @@ func file_add_proto_init() {
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
-var _ context.Context
-var _ grpc.ClientConnInterface
+var (
+	_ context.Context
+	_ grpc.ClientConnInterface
+)
 
 // This is a compile-time assertion to ensure that this generated file
 // is compatible with the grpc package it is being compiled against.
@@ -262,8 +268,7 @@ type AdderServer interface {
 }
 
 // UnimplementedAdderServer can be embedded to have forward compatible implementations.
-type UnimplementedAdderServer struct {
-}
+type UnimplementedAdderServer struct{}
 
 func (*UnimplementedAdderServer) Add(context.Context, *AddReq) (*AddResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Add not implemented")

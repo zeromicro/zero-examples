@@ -1,12 +1,11 @@
 package main
 
 import (
-	"flag"
-	"fmt"
-
 	"bookstore/api/internal/config"
 	"bookstore/api/internal/handler"
 	"bookstore/api/internal/svc"
+	"flag"
+	"fmt"
 
 	"github.com/tal-tech/go-zero/core/conf"
 	"github.com/tal-tech/go-zero/rest"

@@ -2,7 +2,6 @@ package main
 
 import (
 	"flag"
-
 	"shorturl/api/internal/config"
 	"shorturl/api/internal/handler"
 	"shorturl/api/internal/svc"

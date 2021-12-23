@@ -6,9 +6,8 @@
 package checker
 
 import (
-	"context"
-
 	"bookstore/rpc/check/check"
+	"context"
 
 	"github.com/tal-tech/go-zero/zrpc"
 )
