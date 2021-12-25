@@ -19,9 +19,11 @@ var key = flag.String("key", "zrpc", "the key on etcd")
 func main() {
 	flag.Parse()
 
-	client, err := zrpc.NewClientNoAuth(discov.EtcdConf{
-		Hosts: []string{"localhost:2379"},
-		Key:   *key,
+	client, err := zrpc.NewClient(zrpc.RpcClientConf{
+		Etcd: discov.EtcdConf{
+			Hosts: []string{"localhost:2379"},
+			Key:   *key,
+		},
 	})
 	if err != nil {
 		log.Fatal(err)
