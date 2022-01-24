@@ -41,7 +41,7 @@ func handle(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	httpx.OkJson(w, "helllo, "+req.User)
+	httpx.OkJson(w, "hello, "+req.User)
 }
 
 func main() {
@@ -53,6 +53,7 @@ func main() {
 				Mode: "console",
 			},
 		},
+		Host:     "localhost",
 		Port:     *port,
 		Timeout:  *timeout,
 		MaxConns: 500,

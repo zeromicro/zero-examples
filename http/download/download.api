@@ -1,0 +1,8 @@
+type Request {
+	File string `path:"file"`
+}
+
+service download-api {
+	@handler DownloadHandler
+	get /static/:file(Request)
+}
