@@ -20,3 +20,8 @@ curl -w  "\nhttp: %{http_code} \n" --location --request POST '127.0.0.1:8888/use
     "userId": "a"
 }'
 ```
+
+##### Note Before Run 
+```
+在运行Demo前，需要修改"/etc/jwt-api.yaml"中"AccessSecret"字段；否则访问"/user/info"接口出现 "401:Token is expired "
+```
