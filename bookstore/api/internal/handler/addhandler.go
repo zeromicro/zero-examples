@@ -6,7 +6,7 @@ import (
 	"bookstore/api/internal/types"
 	"net/http"
 
-	"github.com/tal-tech/go-zero/rest/httpx"
+	"github.com/zeromicro/go-zero/rest/httpx"
 )
 
 func AddHandler(ctx *svc.ServiceContext) http.HandlerFunc {

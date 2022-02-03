@@ -5,15 +5,15 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/tal-tech/go-zero/core/stores/cache"
-	"github.com/tal-tech/go-zero/core/stores/sqlc"
-	"github.com/tal-tech/go-zero/core/stores/sqlx"
-	"github.com/tal-tech/go-zero/core/stringx"
-	"github.com/tal-tech/go-zero/tools/goctl/model/sql/builderx"
+	"github.com/zeromicro/go-zero/core/stores/builder"
+	"github.com/zeromicro/go-zero/core/stores/cache"
+	"github.com/zeromicro/go-zero/core/stores/sqlc"
+	"github.com/zeromicro/go-zero/core/stores/sqlx"
+	"github.com/zeromicro/go-zero/core/stringx"
 )
 
 var (
-	bookFieldNames          = builderx.FieldNames(&Book{})
+	bookFieldNames          = builder.RawFieldNames(&Book{})
 	bookRows                = strings.Join(bookFieldNames, ",")
 	bookRowsExpectAutoSet   = strings.Join(stringx.Remove(bookFieldNames, "create_time", "update_time"), ",")
 	bookRowsWithPlaceHolder = strings.Join(stringx.Remove(bookFieldNames, "book", "create_time", "update_time"), "=?,") + "=?"
