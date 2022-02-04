@@ -7,7 +7,7 @@ import (
 	"github.com/zeromicro/zero-examples/jwt/internal/svc"
 	"github.com/zeromicro/zero-examples/jwt/internal/types"
 
-	"github.com/tal-tech/go-zero/rest/httpx"
+	"github.com/zeromicro/go-zero/rest/httpx"
 )
 
 func GetUserHandler(ctx *svc.ServiceContext) http.HandlerFunc {

@@ -9,8 +9,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/tal-tech/go-zero/core/conf"
-	"github.com/tal-tech/go-zero/zrpc"
+	"github.com/zeromicro/go-zero/core/conf"
+	"github.com/zeromicro/go-zero/zrpc"
 
 	"github.com/zeromicro/zero-contrib/zrpc/registry/polaris"
 	"github.com/zeromicro/zero-examples/discovery/polaris/server/internal/config"

@@ -10,8 +10,8 @@ import (
 	"time"
 
 	"github.com/nacos-group/nacos-sdk-go/common/constant"
-	"github.com/tal-tech/go-zero/core/conf"
-	"github.com/tal-tech/go-zero/zrpc"
+	"github.com/zeromicro/go-zero/core/conf"
+	"github.com/zeromicro/go-zero/zrpc"
 	"github.com/zeromicro/zero-contrib/zrpc/registry/nacos"
 
 	"github.com/zeromicro/zero-examples/discovery/nacos/server/internal/config"

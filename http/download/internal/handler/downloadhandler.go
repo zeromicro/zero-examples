@@ -7,7 +7,7 @@ import (
 	"download/internal/svc"
 	"download/internal/types"
 
-	"github.com/tal-tech/go-zero/rest/httpx"
+	"github.com/zeromicro/go-zero/rest/httpx"
 )
 
 func DownloadHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {

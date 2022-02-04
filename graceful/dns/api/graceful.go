@@ -3,9 +3,9 @@ package main
 import (
 	"flag"
 
-	"github.com/tal-tech/go-zero/core/conf"
-	"github.com/tal-tech/go-zero/rest"
-	"github.com/tal-tech/go-zero/zrpc"
+	"github.com/zeromicro/go-zero/core/conf"
+	"github.com/zeromicro/go-zero/rest"
+	"github.com/zeromicro/go-zero/zrpc"
 	"github.com/zeromicro/zero-examples/graceful/dns/api/config"
 	"github.com/zeromicro/zero-examples/graceful/dns/api/handler"
 	"github.com/zeromicro/zero-examples/graceful/dns/api/svc"

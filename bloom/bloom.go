@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/tal-tech/go-zero/core/bloom"
-	"github.com/tal-tech/go-zero/core/stores/redis"
+	"github.com/zeromicro/go-zero/core/bloom"
+	"github.com/zeromicro/go-zero/core/stores/redis"
 )
 
 func main() {

@@ -10,8 +10,8 @@ import (
 
 	transform "shorturl/rpc/transform/pb"
 
-	"github.com/tal-tech/go-zero/core/jsonx"
-	"github.com/tal-tech/go-zero/zrpc"
+	"github.com/zeromicro/go-zero/core/jsonx"
+	"github.com/zeromicro/go-zero/zrpc"
 )
 
 type (

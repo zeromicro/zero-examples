@@ -14,7 +14,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/tal-tech/go-zero/core/codec"
+	"github.com/zeromicro/go-zero/core/codec"
 	"github.com/zeromicro/zero-examples/http/signature/internal"
 )
 

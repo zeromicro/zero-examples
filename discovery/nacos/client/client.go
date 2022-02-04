@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/tal-tech/go-zero/core/conf"
-	"github.com/tal-tech/go-zero/zrpc"
+	"github.com/zeromicro/go-zero/core/conf"
+	"github.com/zeromicro/go-zero/zrpc"
 	_ "github.com/zeromicro/zero-contrib/zrpc/registry/nacos"
 	"github.com/zeromicro/zero-examples/rpc/remote/unary"
 )

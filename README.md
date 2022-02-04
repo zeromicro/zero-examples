@@ -1,13 +1,13 @@
-<img align="right" width="150px" src="https://raw.githubusercontent.com/tal-tech/zero-doc/main/doc/images/go-zero.png">
+<img align="right" width="150px" src="https://raw.githubusercontent.com/zeromicro/zero-doc/main/doc/images/go-zero.png">
 
 # go-zero
 
 English | [简体中文](readme-cn.md)
 
-[![Go](https://github.com/tal-tech/go-zero/workflows/Go/badge.svg?branch=master)](https://github.com/tal-tech/go-zero/actions)
-[![codecov](https://codecov.io/gh/tal-tech/go-zero/branch/master/graph/badge.svg)](https://codecov.io/gh/tal-tech/go-zero)
-[![Go Report Card](https://goreportcard.com/badge/github.com/tal-tech/go-zero)](https://goreportcard.com/report/github.com/tal-tech/go-zero)
-[![Release](https://img.shields.io/github/v/release/tal-tech/go-zero.svg?style=flat-square)](https://github.com/tal-tech/go-zero)
+[![Go](https://github.com/zeromicro/go-zero/workflows/Go/badge.svg?branch=master)](https://github.com/zeromicro/go-zero/actions)
+[![codecov](https://codecov.io/gh/zeromicro/go-zero/branch/master/graph/badge.svg)](https://codecov.io/gh/zeromicro/go-zero)
+[![Go Report Card](https://goreportcard.com/badge/github.com/zeromicro/go-zero)](https://goreportcard.com/report/github.com/zeromicro/go-zero)
+[![Release](https://img.shields.io/github/v/release/zeromicro/go-zero.svg?style=flat-square)](https://github.com/zeromicro/go-zero)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## 0. what is go-zero
@@ -25,7 +25,7 @@ Advantages of go-zero:
 * auto validate the request parameters from clients
 * plenty of builtin microservice management and concurrent toolkits
 
-<img src="https://raw.githubusercontent.com/tal-tech/zero-doc/main/doc/images/architecture-en.png" alt="Architecture" width="1500" />
+<img src="https://raw.githubusercontent.com/zeromicro/zero-doc/main/doc/images/architecture-en.png" alt="Architecture" width="1500" />
 
 ## 1. Backgrounds of go-zero
 
@@ -76,7 +76,7 @@ go-zero is a web and rpc framework that integrates lots of engineering practices
 
 As below, go-zero protects the system with couple layers and mechanisms:
 
-![Resilience](https://raw.githubusercontent.com/tal-tech/zero-doc/main/doc/images/resilience-en.png)
+![Resilience](https://raw.githubusercontent.com/zeromicro/zero-doc/main/doc/images/resilience-en.png)
 
 ## 4. Future development plans of go-zero
 
@@ -88,23 +88,23 @@ As below, go-zero protects the system with couple layers and mechanisms:
 Run the following command under your project:
 
 ```shell
-go get -u github.com/tal-tech/go-zero
+go get -u github.com/zeromicro/go-zero
 ```
 
 ## 6. Quick Start
 
 0. full examples can be checked out from below:
 
-     [Rapid development of microservice systems](https://github.com/tal-tech/zero-doc/blob/main/doc/shorturl-en.md)
+     [Rapid development of microservice systems](https://github.com/zeromicro/zero-doc/blob/main/doc/shorturl-en.md)
 
-     [Rapid development of microservice systems - multiple RPCs](https://github.com/tal-tech/zero-doc/blob/main/doc/bookstore-en.md)
+     [Rapid development of microservice systems - multiple RPCs](https://github.com/zeromicro/zero-doc/blob/main/doc/bookstore-en.md)
 
 1. install goctl
 
    `goctl`can be read as `go control`. `goctl` means not to be controlled by code, instead, we control it. The inside `go` is not `golang`. At the very beginning, I was expecting it to help us improve the productivity, and make our lives easier.
 
    ```shell
-   GO111MODULE=on go get -u github.com/tal-tech/go-zero/tools/goctl
+   GO111MODULE=on go get -u github.com/zeromicro/go-zero/tools/goctl
    ```
 
    make sure goctl is executable.
@@ -200,15 +200,11 @@ go get -u github.com/tal-tech/go-zero
 
 ## 7. Benchmark
 
-![benchmark](https://raw.githubusercontent.com/tal-tech/zero-doc/main/doc/images/benchmark.png)
+![benchmark](https://raw.githubusercontent.com/zeromicro/zero-doc/main/doc/images/benchmark.png)
 
 [Checkout the test code](https://github.com/smallnest/go-web-framework-benchmark)
 
 ## 8. Documents (adding)
 
-* [Rapid development of microservice systems](https://github.com/tal-tech/zero-doc/blob/main/doc/shorturl-en.md)
-* [Rapid development of microservice systems - multiple RPCs](https://github.com/tal-tech/zero-doc/blob/main/doc/bookstore-en.md)
-
-## 9. Chat group
-
-Join the chat via https://join.slack.com/t/go-zeroworkspace/shared_invite/zt-m39xssxc-kgIqERa7aVsujKNj~XuPKg
+* [Rapid development of microservice systems](https://github.com/zeromicro/zero-doc/blob/main/doc/shorturl-en.md)
+* [Rapid development of microservice systems - multiple RPCs](https://github.com/zeromicro/zero-doc/blob/main/doc/bookstore-en.md)

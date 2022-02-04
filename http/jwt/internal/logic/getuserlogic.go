@@ -6,7 +6,7 @@ import (
 	"github.com/zeromicro/zero-examples/jwt/internal/svc"
 	"github.com/zeromicro/zero-examples/jwt/internal/types"
 
-	"github.com/tal-tech/go-zero/core/logx"
+	"github.com/zeromicro/go-zero/core/logx"
 )
 
 type GetUserLogic struct {

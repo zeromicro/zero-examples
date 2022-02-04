@@ -5,7 +5,7 @@ import (
 	"upload/internal/logic"
 	"upload/internal/svc"
 
-	"github.com/tal-tech/go-zero/rest/httpx"
+	"github.com/zeromicro/go-zero/rest/httpx"
 )
 
 func UploadHandler(ctx *svc.ServiceContext) http.HandlerFunc {
