@@ -12,7 +12,7 @@ import (
 func main() {
 	const round = 5
 	var wg sync.WaitGroup
-	barrier := syncx.NewSharedCalls()
+	barrier := syncx.NewSingleFlight()
 
 	wg.Add(round)
 	for i := 0; i < round; i++ {
