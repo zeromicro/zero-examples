@@ -2,7 +2,7 @@ package logic
 
 import (
 	"fmt"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"os"
 	"path"
@@ -41,19 +41,13 @@ func (l *UploadLogic) Upload() (resp *types.Response, err error) {
 	fmt.Printf("File Size: %+v\n", handler.Size)
 	fmt.Printf("MIME Header: %+v\n", handler.Header)
 
-	fileBytes, err := ioutil.ReadAll(file)
-	if err != nil {
-		fmt.Println(err)
-		return nil, err
-	}
-
 	tempFile, err := os.Create(path.Join(l.svcCtx.Config.Path, handler.Filename))
 	if err != nil {
 		fmt.Println(err)
 		return nil, err
 	}
 	defer tempFile.Close()
-	tempFile.Write(fileBytes)
+	io.Copy(tempFile, file)
 
 	return &types.Response{
 		OK: 0,
