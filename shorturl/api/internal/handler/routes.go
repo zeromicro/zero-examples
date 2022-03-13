@@ -3,22 +3,25 @@ package handler
 
 import (
 	"net/http"
+
 	"shorturl/api/internal/svc"
 
 	"github.com/zeromicro/go-zero/rest"
 )
 
-func RegisterHandlers(engine *rest.Server, serverCtx *svc.ServiceContext) {
-	engine.AddRoutes([]rest.Route{
-		{
-			Method:  http.MethodGet,
-			Path:    "/shorten",
-			Handler: shortenHandler(serverCtx),
+func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
+	server.AddRoutes(
+		[]rest.Route{
+			{
+				Method:  http.MethodGet,
+				Path:    "/shorten",
+				Handler: ShortenHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodGet,
+				Path:    "/expand",
+				Handler: ExpandHandler(serverCtx),
+			},
 		},
-		{
-			Method:  http.MethodGet,
-			Path:    "/expand",
-			Handler: expandHandler(serverCtx),
-		},
-	})
+	)
 }
