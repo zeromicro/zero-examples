@@ -49,7 +49,7 @@ func timingWheelMode() {
 	defer tw.Stop()
 	for i := 0; ; i++ {
 		tw.SetTimer(i, i, interval)
-		time.Sleep(time.Millisecond)
+		time.Sleep(time.Microsecond)
 	}
 }
 
@@ -72,7 +72,7 @@ func traditionalMode() {
 
 func job(count *uint64) {
 	v := atomic.AddUint64(count, 1)
-	if v%1000 == 0 {
+	if v%10000 == 0 {
 		fmt.Println(v)
 	}
 }
