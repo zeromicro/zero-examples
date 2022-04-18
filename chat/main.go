@@ -26,6 +26,7 @@ func main() {
 				Mode: "console",
 			},
 		},
+		Host:         "localhost",
 		Port:         *port,
 		Timeout:      *timeout,
 		CpuThreshold: *cpu,
