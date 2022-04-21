@@ -1,0 +1,15 @@
+go 1.15
+
+use (
+	./bookstore
+	./discovery/consul
+	./http/cors
+	./http/group
+	./http/jwt
+	./http/timeout
+	./http/upload
+	./http/withtimeout
+	./rpc/tls/shorturl
+	./servicegroup
+	./shorturl
+)
