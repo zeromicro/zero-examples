@@ -53,7 +53,6 @@ func main() {
 				Mode: "console",
 			},
 		},
-		Host:     "localhost",
 		Port:     *port,
 		Timeout:  *timeout,
 		MaxConns: 500,
@@ -64,7 +63,7 @@ func main() {
 	engine.Use(second)
 	engine.AddRoute(rest.Route{
 		Method:  http.MethodGet,
-		Path:    "/",
+		Path:    "/demo",
 		Handler: handle,
 	})
 	engine.Start()

@@ -33,7 +33,6 @@ func main() {
 				Mode: "console",
 			},
 		},
-		Host: "localhost",
 		Port: *port,
 	})
 	defer svr.Stop()
