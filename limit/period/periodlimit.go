@@ -18,7 +18,6 @@ const seconds = 5
 
 var (
 	rdx     = flag.String("redis", "localhost:6379", "the redis, default localhost:6379")
-	rdxType = flag.String("redisType", "node", "the redis type, default node")
 	rdxPass = flag.String("redisPass", "", "the redis password")
 	rdxKey  = flag.String("redisKey", "rate", "the redis key, default rate")
 	threads = flag.Int("threads", runtime.NumCPU(), "the concurrent threads, default to cores")
@@ -27,7 +26,7 @@ var (
 func main() {
 	flag.Parse()
 
-	store := redis.NewRedis(*rdx, *rdxType, *rdxPass)
+	store := redis.New(*rdx, redis.WithPass(*rdxPass))
 	fmt.Println(store.Ping())
 	lmt := limit.NewPeriodLimit(seconds, 5, store, *rdxKey)
 	timer := time.NewTimer(time.Second * seconds)

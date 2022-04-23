@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	store := redis.NewRedis("localhost:6379", "node")
+	store := redis.New("localhost:6379")
 	filter := bloom.New(store, "testbloom", 64)
 	filter.Add([]byte("kevin"))
 	filter.Add([]byte("wan"))
