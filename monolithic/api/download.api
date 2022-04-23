@@ -1,0 +1,10 @@
+syntax = "v1"
+
+type DownloadRequest {
+	File string `path:"file"`
+}
+
+service file-api {
+	@handler DownloadHandler
+	get /static/:file(DownloadRequest)
+}

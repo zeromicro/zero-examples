@@ -1,0 +1,10 @@
+syntax = "v1"
+
+type UploadResponse {
+	OK int `json:"ok"`
+}
+
+service file-api {
+	@handler UploadHandler
+	post /upload returns (UploadResponse)
+}
