@@ -6,5 +6,5 @@ type DownloadRequest struct {
 }
 
 type UploadResponse struct {
-	OK int `json:"ok"`
+	Code int `json:"code"`
 }

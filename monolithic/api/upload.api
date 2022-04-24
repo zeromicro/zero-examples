@@ -1,7 +1,7 @@
 syntax = "v1"
 
 type UploadResponse {
-	OK int `json:"ok"`
+	Code int `json:"code"`
 }
 
 service file-api {
