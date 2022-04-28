@@ -9,7 +9,7 @@ import (
 	"github.com/zeromicro/go-zero/rest/httpx"
 )
 
-func shortenHandler(ctx *svc.ServiceContext) http.HandlerFunc {
+func ShortenHandler(ctx *svc.ServiceContext) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		var req types.ShortenReq
 		if err := httpx.Parse(r, &req); err != nil {

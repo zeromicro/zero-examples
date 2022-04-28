@@ -27,7 +27,7 @@ func NewShortenLogic(ctx context.Context, svcCtx *svc.ServiceContext) *ShortenLo
 
 func (l *ShortenLogic) Shorten(in *transform.ShortenReq) (*transform.ShortenResp, error) {
 	key := hash.Md5Hex([]byte(in.Url))[:6]
-	_, err := l.svcCtx.Model.Insert(model.Shorturl{
+	_, err := l.svcCtx.Model.Insert(l.ctx, model.Shorturl{
 		Shorten: key,
 		Url:     in.Url,
 	})

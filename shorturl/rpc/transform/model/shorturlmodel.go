@@ -1,6 +1,7 @@
 package model
 
 import (
+	"context"
 	"database/sql"
 	"fmt"
 	"strings"
@@ -40,17 +41,17 @@ func NewShorturlModel(conn sqlx.SqlConn, c cache.CacheConf, table string) *Short
 	}
 }
 
-func (m *ShorturlModel) Insert(data Shorturl) (sql.Result, error) {
+func (m *ShorturlModel) Insert(ctx context.Context, data Shorturl) (sql.Result, error) {
 	query := `insert into ` + m.table + ` (` + shorturlRowsExpectAutoSet + `) values (?, ?)`
-	return m.ExecNoCache(query, data.Shorten, data.Url)
+	return m.ExecNoCacheCtx(ctx, query, data.Shorten, data.Url)
 }
 
-func (m *ShorturlModel) FindOne(shorten string) (*Shorturl, error) {
+func (m *ShorturlModel) FindOne(ctx context.Context, shorten string) (*Shorturl, error) {
 	shorturlShortenKey := fmt.Sprintf("%s%v", cacheShorturlShortenPrefix, shorten)
 	var resp Shorturl
-	err := m.QueryRow(&resp, shorturlShortenKey, func(conn sqlx.SqlConn, v interface{}) error {
+	err := m.QueryRowCtx(ctx, &resp, shorturlShortenKey, func(ctx context.Context, conn sqlx.SqlConn, v interface{}) error {
 		query := `select ` + shorturlRows + ` from ` + m.table + ` where shorten = ? limit 1`
-		return conn.QueryRow(v, query, shorten)
+		return conn.QueryRowCtx(ctx, v, query, shorten)
 	})
 	switch err {
 	case nil:
@@ -62,25 +63,25 @@ func (m *ShorturlModel) FindOne(shorten string) (*Shorturl, error) {
 	}
 }
 
-func (m *ShorturlModel) Update(data Shorturl) error {
+func (m *ShorturlModel) Update(ctx context.Context, data Shorturl) error {
 	shorturlShortenKey := fmt.Sprintf("%s%v", cacheShorturlShortenPrefix, data.Shorten)
-	_, err := m.Exec(func(conn sqlx.SqlConn) (result sql.Result, err error) {
+	_, err := m.ExecCtx(ctx, func(ctx context.Context, conn sqlx.SqlConn) (result sql.Result, err error) {
 		query := `update ` + m.table + ` set ` + shorturlRowsWithPlaceHolder + ` where shorten = ?`
-		return conn.Exec(query, data.Url, data.Shorten)
+		return conn.ExecCtx(ctx, query, data.Url, data.Shorten)
 	}, shorturlShortenKey)
 	return err
 }
 
-func (m *ShorturlModel) Delete(shorten string) error {
-	_, err := m.FindOne(shorten)
+func (m *ShorturlModel) Delete(ctx context.Context, shorten string) error {
+	_, err := m.FindOne(ctx, shorten)
 	if err != nil {
 		return err
 	}
 
 	shorturlShortenKey := fmt.Sprintf("%s%v", cacheShorturlShortenPrefix, shorten)
-	_, err = m.Exec(func(conn sqlx.SqlConn) (result sql.Result, err error) {
+	_, err = m.ExecCtx(ctx, func(ctx context.Context, conn sqlx.SqlConn) (result sql.Result, err error) {
 		query := `delete from ` + m.table + ` where shorten = ?`
-		return conn.Exec(query, shorten)
+		return conn.ExecCtx(ctx, query, shorten)
 	}, shorturlShortenKey)
 	return err
 }

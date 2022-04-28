@@ -10,3 +10,6 @@ DataSource: root:@tcp(localhost:3306)/gozero
 Table: shorturl
 Cache:
   - Host: localhost:6379
+Telemetry:
+  Endpoint: http://localhost:14268/api/traces
+  Batcher: jaeger

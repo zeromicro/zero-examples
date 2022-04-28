@@ -9,7 +9,7 @@ import (
 	"github.com/zeromicro/go-zero/rest/httpx"
 )
 
-func expandHandler(ctx *svc.ServiceContext) http.HandlerFunc {
+func ExpandHandler(ctx *svc.ServiceContext) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		var req types.ExpandReq
 		if err := httpx.Parse(r, &req); err != nil {

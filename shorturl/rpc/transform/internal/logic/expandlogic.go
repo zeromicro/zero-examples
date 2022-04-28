@@ -24,7 +24,7 @@ func NewExpandLogic(ctx context.Context, svcCtx *svc.ServiceContext) *ExpandLogi
 }
 
 func (l *ExpandLogic) Expand(in *transform.ExpandReq) (*transform.ExpandResp, error) {
-	res, err := l.svcCtx.Model.FindOne(in.Shorten)
+	res, err := l.svcCtx.Model.FindOne(l.ctx, in.Shorten)
 	if err != nil {
 		return nil, err
 	}
