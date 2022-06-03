@@ -23,7 +23,6 @@ func NewKafkaWriter(pusher *kq.Pusher) *KafkaWriter {
 func (w *KafkaWriter) Write(p []byte) (n int, err error) {
 	// writing log with newlines, trim them.
 	if err := w.Pusher.Push(strings.TrimSpace(string(p))); err != nil {
-		fmt.Println(err)
 		return 0, err
 	}
 
