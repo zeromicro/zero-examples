@@ -3,8 +3,8 @@ module example
 go 1.18
 
 require (
-	github.com/zeromicro/go-zero v1.3.4-0.20220603024922-b94b68a427a8
-	github.com/zeromicro/zero-contrib/logx/zapx v0.0.0-20220603061241-bb70548befa8
+	github.com/zeromicro/go-zero v1.3.4
+	github.com/zeromicro/zero-contrib/logx/zapx v0.0.0-20220604015126-80bd73b0c2a0
 )
 
 require (

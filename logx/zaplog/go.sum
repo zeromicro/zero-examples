@@ -420,8 +420,12 @@ github.com/yuin/gopher-lua v0.0.0-20210529063254-f4c35e4016d9/go.mod h1:E1AXubJB
 github.com/zeromicro/go-zero v1.3.3/go.mod h1:LwuYc2V04ZHhWPWGJYQ+kJ5DT4QSkeaZGqXiQcpkfks=
 github.com/zeromicro/go-zero v1.3.4-0.20220603024922-b94b68a427a8 h1:HPoUn6xDI67t6OI1o7TxLFlJUST5Q8EiultJxyecwdQ=
 github.com/zeromicro/go-zero v1.3.4-0.20220603024922-b94b68a427a8/go.mod h1:nEU/ITZSmxRxvr/JmSoJ48MNV62UpY6bqJz9Voba7Yw=
+github.com/zeromicro/go-zero v1.3.4 h1:XeNdwcrOmnvHj891AmeCA9RrRj1PeN49//KKCK4WAXk=
+github.com/zeromicro/go-zero v1.3.4/go.mod h1:nEU/ITZSmxRxvr/JmSoJ48MNV62UpY6bqJz9Voba7Yw=
 github.com/zeromicro/zero-contrib/logx/zapx v0.0.0-20220603061241-bb70548befa8 h1:4bbiVE86WaSuY/8UrJCcilv6AHOX2XHAO6iHmFT/8KU=
 github.com/zeromicro/zero-contrib/logx/zapx v0.0.0-20220603061241-bb70548befa8/go.mod h1:dSU4l56RLWmoLDXQ4sVJ9q/6weYU8/hfO10DoCSGM4Q=
+github.com/zeromicro/zero-contrib/logx/zapx v0.0.0-20220604015126-80bd73b0c2a0 h1:NZTYlg12WUWRLaLQrfng36mC3sk5Vf5UzocPXZnhQlY=
+github.com/zeromicro/zero-contrib/logx/zapx v0.0.0-20220604015126-80bd73b0c2a0/go.mod h1:Qlw5bNkBem+jJ2GBsoWhQdq9x92RjgYalTbjOLKHr0g=
 go.etcd.io/etcd/api/v3 v3.5.2/go.mod h1:5GB2vv4A4AOn3yk7MftYGHkUfGtDHnEraIjym4dYz5A=
 go.etcd.io/etcd/api/v3 v3.5.4/go.mod h1:5GB2vv4A4AOn3yk7MftYGHkUfGtDHnEraIjym4dYz5A=
 go.etcd.io/etcd/client/pkg/v3 v3.5.2/go.mod h1:IJHfcCEKxYu1Os13ZdwCwIUTUVGYTSAM3YSwc9/Ac1g=
