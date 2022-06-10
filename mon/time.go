@@ -2,11 +2,10 @@ package main
 
 import (
 	"context"
-	"github.com/globalsign/mgo/bson"
-	"github.com/zeromicro/go-zero/core/stores/mon"
-
 	"time"
 
+	"github.com/globalsign/mgo/bson"
+	"github.com/zeromicro/go-zero/core/stores/mon"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
