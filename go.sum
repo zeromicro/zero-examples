@@ -532,6 +532,8 @@ github.com/zeromicro/go-zero v1.3.2 h1:2HcmceZDEGwZWvofCG+0GXyh+Gtz/wKCW4Fq8Mb7K
 github.com/zeromicro/go-zero v1.3.2/go.mod h1:DEj3Fwj1Ui1ltsgf6YqwTL9nD4+tYzIRX0c1pWtQo1E=
 github.com/zeromicro/go-zero v1.3.3-0.20220419060304-2cdff979347d h1:eV744zuPnJ4gyHRiQ5Q3YQZkx9ldSbFO5UEnD7LoEnw=
 github.com/zeromicro/go-zero v1.3.3-0.20220419060304-2cdff979347d/go.mod h1:Lux9O21ZbTMJnLVGWeJUAUUJGXlJ2djAgouhXfhHoDs=
+github.com/zeromicro/go-zero v1.3.4 h1:XeNdwcrOmnvHj891AmeCA9RrRj1PeN49//KKCK4WAXk=
+github.com/zeromicro/go-zero v1.3.4/go.mod h1:nEU/ITZSmxRxvr/JmSoJ48MNV62UpY6bqJz9Voba7Yw=
 github.com/zeromicro/protobuf v0.0.0-20210921042113-636cd51f0c35/go.mod h1:CJvyESptK/6uU5003fPJQ9Hmubl3vRuGqaLgzUU0R7Y=
 github.com/zeromicro/zero-contrib/zrpc/registry/nacos v0.0.0-20211027021815-8ff8a83a094e h1:g6ai9UmjXOie8T/sZ4Dwh5npfDkvcd1dgib5KO50jOo=
 github.com/zeromicro/zero-contrib/zrpc/registry/nacos v0.0.0-20211027021815-8ff8a83a094e/go.mod h1:lcoXZBqEheD4KZNU8Aqtm6AN9U1uIyrWrQUQwKO77pE=

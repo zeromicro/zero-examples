@@ -1,0 +1,5 @@
+Name = "upload-api"
+Host = "0.0.0.0"
+Port = 8_888
+# set to 1GB, default is 1MB
+MaxBytes = 1_073_741_824

@@ -10,7 +10,7 @@ require (
 	github.com/gorilla/websocket v1.4.2
 	github.com/nacos-group/nacos-sdk-go v1.0.9
 	github.com/stretchr/testify v1.7.0
-	github.com/zeromicro/go-zero v1.3.3-0.20220419060304-2cdff979347d
+	github.com/zeromicro/go-zero v1.3.4
 	github.com/zeromicro/zero-contrib/zrpc/registry/nacos v0.0.0-20211027021815-8ff8a83a094e
 	github.com/zeromicro/zero-contrib/zrpc/registry/polaris v0.0.0-20211220161209-f345f99a9600
 	golang.org/x/net v0.0.0-20220225172249-27dd8689420f
