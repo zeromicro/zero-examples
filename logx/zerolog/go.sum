@@ -392,8 +392,8 @@ github.com/yuin/goldmark v1.3.5/go.mod h1:mwnBkeHKe2W/ZEtQ+71ViKU8L12m81fl3OWwC1
 github.com/yuin/gopher-lua v0.0.0-20210529063254-f4c35e4016d9/go.mod h1:E1AXubJBdNmFERAOucpDIxNzeGfLzg0mYh+UfMWdChA=
 github.com/zeromicro/go-zero v1.3.4 h1:XeNdwcrOmnvHj891AmeCA9RrRj1PeN49//KKCK4WAXk=
 github.com/zeromicro/go-zero v1.3.4/go.mod h1:nEU/ITZSmxRxvr/JmSoJ48MNV62UpY6bqJz9Voba7Yw=
-github.com/zeromicro/zero-contrib/logx/zerologx v0.0.0-20220701163134-c747429e8900 h1:q4sV3SNz7cxOguaLwpdMuemegnDZ7gQ3MIY3bSrTfvU=
-github.com/zeromicro/zero-contrib/logx/zerologx v0.0.0-20220701163134-c747429e8900/go.mod h1:XuduyvG3UXv8jjTreuRJPZWoU31b12LCMmyNRLJGLDo=
+github.com/zeromicro/zero-contrib/logx/zerologx v0.0.0-20220702160639-bbe8e8ed0d6d h1:81vym1q7M0j3z6HPwLEq7ha0U4Wf7xejTwM7NXpu0+o=
+github.com/zeromicro/zero-contrib/logx/zerologx v0.0.0-20220702160639-bbe8e8ed0d6d/go.mod h1:dNzzEfXz3VrWrwQebr+pfGg8oNwNCsbMbsbu40a9rvU=
 go.etcd.io/etcd/api/v3 v3.5.4/go.mod h1:5GB2vv4A4AOn3yk7MftYGHkUfGtDHnEraIjym4dYz5A=
 go.etcd.io/etcd/client/pkg/v3 v3.5.4/go.mod h1:IJHfcCEKxYu1Os13ZdwCwIUTUVGYTSAM3YSwc9/Ac1g=
 go.etcd.io/etcd/client/v3 v3.5.4/go.mod h1:ZaRkVgBZC+L+dLCjTcF1hRXpgZXQPOvnA/Ak/gq3kiY=
