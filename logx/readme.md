@@ -12,6 +12,9 @@ English | [简体中文](readme-cn.md)
 - logrus
   - implementation: [https://github.com/zeromicro/zero-contrib/blob/main/logx/logrusx/logrus.go](https://github.com/zeromicro/zero-contrib/blob/main/logx/logrusx/logrus.go)
   - usage example: [https://github.com/zeromicro/zero-examples/blob/main/logx/logrus/main.go](https://github.com/zeromicro/zero-examples/blob/main/logx/logrus/main.go)
+- zerolog
+  - implementation：[https://github.com/zeromicro/zero-contrib/blob/main/logx/zerologx/zerolog.go](https://github.com/zeromicro/zero-contrib/blob/main/logx/zerologx/zerolog.go)
+  - usage example: [https://github.com/zeromicro/zero-examples/blob/main/logx/zerolog/main.go](https://github.com/zeromicro/zero-examples/blob/main/logx/zerolog/main.go)
 
 For more libs, please implement and PR to [https://github.com/zeromicro/zero-contrib](https://github.com/zeromicro/zero-contrib)
 

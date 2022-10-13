@@ -12,6 +12,9 @@
 - logrus
   - 实现：[https://github.com/zeromicro/zero-contrib/blob/main/logx/logrusx/logrus.go](https://github.com/zeromicro/zero-contrib/blob/main/logx/logrusx/logrus.go)
   - 使用示例：[https://github.com/zeromicro/zero-examples/blob/main/logx/logrus/main.go](https://github.com/zeromicro/zero-examples/blob/main/logx/logrus/main.go)
+- zerolog
+  - 实现：[https://github.com/zeromicro/zero-contrib/blob/main/logx/zerologx/zerolog.go](https://github.com/zeromicro/zero-contrib/blob/main/logx/zerologx/zerolog.go)
+  - 使用示例: [https://github.com/zeromicro/zero-examples/blob/main/logx/zerolog/main.go](https://github.com/zeromicro/zero-examples/blob/main/logx/zerolog/main.go)
 
 对于其它的日志库，请参考上面示例实现，并欢迎提交 `PR` 到 [https://github.com/zeromicro/zero-contrib](https://github.com/zeromicro/zero-contrib)
 

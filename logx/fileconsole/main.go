@@ -1,38 +1,75 @@
 package main
 
 import (
+	"bufio"
 	"context"
-	"strings"
+	"os"
 	"time"
 
-	"github.com/zeromicro/go-queue/kq"
+	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/core/logx"
 )
 
-type KafkaWriter struct {
-	Pusher *kq.Pusher
+type MultiWriter struct {
+	writer        logx.Writer
+	consoleWriter logx.Writer
 }
 
-func NewKafkaWriter(pusher *kq.Pusher) *KafkaWriter {
-	return &KafkaWriter{
-		Pusher: pusher,
-	}
+func NewMultiWriter(writer logx.Writer) (logx.Writer, error) {
+	return &MultiWriter{
+		writer:        writer,
+		consoleWriter: logx.NewWriter(bufio.NewWriter(os.Stdout)),
+	}, nil
 }
 
-func (w *KafkaWriter) Write(p []byte) (n int, err error) {
-	// writing log with newlines, trim them.
-	if err := w.Pusher.Push(strings.TrimSpace(string(p))); err != nil {
-		return 0, err
-	}
+func (w *MultiWriter) Alert(v interface{}) {
+	w.consoleWriter.Alert(v)
+	w.writer.Alert(v)
+}
 
-	return len(p), nil
+func (w *MultiWriter) Close() error {
+	w.consoleWriter.Close()
+	return w.writer.Close()
+}
+
+func (w *MultiWriter) Error(v interface{}, fields ...logx.LogField) {
+	w.consoleWriter.Error(v, fields...)
+	w.writer.Error(v, fields...)
+}
+
+func (w *MultiWriter) Info(v interface{}, fields ...logx.LogField) {
+	w.consoleWriter.Info(v, fields...)
+	w.writer.Info(v, fields...)
+}
+
+func (w *MultiWriter) Severe(v interface{}) {
+	w.consoleWriter.Severe(v)
+	w.writer.Severe(v)
+}
+
+func (w *MultiWriter) Slow(v interface{}, fields ...logx.LogField) {
+	w.consoleWriter.Slow(v, fields...)
+	w.writer.Slow(v, fields...)
+}
+
+func (w *MultiWriter) Stack(v interface{}) {
+	w.consoleWriter.Stack(v)
+	w.writer.Stack(v)
+}
+
+func (w *MultiWriter) Stat(v interface{}, fields ...logx.LogField) {
+	w.consoleWriter.Stat(v, fields...)
+	w.writer.Stat(v, fields...)
 }
 
 func main() {
-	pusher := kq.NewPusher([]string{"localhost:9092"}, "go-zero")
-	defer pusher.Close()
+	var c logx.LogConf
+	conf.MustLoad("config.toml", &c)
+	logx.MustSetup(c)
 
-	writer := logx.NewWriter(NewKafkaWriter(pusher))
+	fileWriter := logx.Reset()
+	writer, err := NewMultiWriter(fileWriter)
+	logx.Must(err)
 	logx.SetWriter(writer)
 
 	for {

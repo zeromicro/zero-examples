@@ -2,7 +2,7 @@ module upload
 
 go 1.17
 
-require github.com/zeromicro/go-zero v1.3.2
+require github.com/zeromicro/go-zero v1.3.4
 
 require (
 	github.com/beorn7/perks v1.0.1 // indirect

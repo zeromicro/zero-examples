@@ -1,0 +1,132 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "",
+    "version": ""
+  },
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/expand": {
+      "get": {
+        "operationId": "ExpandHandler",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/expandResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "shorten",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "shorturl-api"
+        ]
+      }
+    },
+    "/shorten": {
+      "get": {
+        "operationId": "ShortenHandler",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/shortenResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "shorturl-api"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "expandReq": {
+      "type": "object",
+      "properties": {
+        "shorten": {
+          "type": "string"
+        }
+      },
+      "title": "expandReq",
+      "required": [
+        "shorten"
+      ]
+    },
+    "expandResp": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string"
+        }
+      },
+      "title": "expandResp",
+      "required": [
+        "url"
+      ]
+    },
+    "shortenReq": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string"
+        }
+      },
+      "title": "shortenReq",
+      "required": [
+        "url"
+      ]
+    },
+    "shortenResp": {
+      "type": "object",
+      "properties": {
+        "shorten": {
+          "type": "string"
+        }
+      },
+      "title": "shortenResp",
+      "required": [
+        "shorten"
+      ]
+    }
+  },
+  "securityDefinitions": {
+    "apiKey": {
+      "type": "apiKey",
+      "description": "Enter JWT Bearer token **_only_**",
+      "name": "Authorization",
+      "in": "header"
+    }
+  },
+  "security": [
+    {
+      "apiKey": []
+    }
+  ]
+}
