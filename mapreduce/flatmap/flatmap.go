@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"sync"
 
 	"github.com/zeromicro/go-zero/core/mr"
 )
@@ -17,12 +18,17 @@ var (
 )
 
 func main() {
-	var allFriends []string
+	var (
+		allFriends []string
+		lock       sync.Mutex
+	)
 	mr.ForEach(func(source chan<- interface{}) {
 		for _, each := range persons {
 			source <- each
 		}
 	}, func(item interface{}) {
+		lock.Lock()
+		defer lock.Unlock()
 		allFriends = append(allFriends, friends[item.(string)]...)
 	}, mr.WithWorkers(100))
 	fmt.Println(allFriends)
