@@ -1,11 +1,13 @@
 package logic
 
 import (
+	"context"
 	"fmt"
 	"io"
 	"net/http"
 	"os"
 	"path"
+
 	"upload/internal/svc"
 	"upload/internal/types"
 
@@ -16,21 +18,21 @@ const maxFileSize = 10 << 20 // 10 MB
 
 type UploadLogic struct {
 	logx.Logger
-	r      *http.Request
+	ctx    context.Context
 	svcCtx *svc.ServiceContext
 }
 
-func NewUploadLogic(r *http.Request, svcCtx *svc.ServiceContext) UploadLogic {
+func NewUploadLogic(ctx context.Context, svcCtx *svc.ServiceContext) UploadLogic {
 	return UploadLogic{
-		Logger: logx.WithContext(r.Context()),
-		r:      r,
+		Logger: logx.WithContext(ctx),
+		ctx:    ctx,
 		svcCtx: svcCtx,
 	}
 }
 
-func (l *UploadLogic) Upload() (resp *types.Response, err error) {
-	l.r.ParseMultipartForm(maxFileSize)
-	file, handler, err := l.r.FormFile("myFile")
+func (l *UploadLogic) Upload(r *http.Request) (resp *types.Response, err error) {
+	_ = r.ParseMultipartForm(maxFileSize)
+	file, handler, err := r.FormFile("myFile")
 	if err != nil {
 		fmt.Println(err)
 		return nil, err
