@@ -9,7 +9,7 @@ require (
 	github.com/google/gops v0.3.22
 	github.com/gorilla/websocket v1.4.2
 	github.com/nacos-group/nacos-sdk-go v1.0.9
-	github.com/stretchr/testify v1.8.0
+	github.com/stretchr/testify v1.8.1
 	github.com/zeromicro/go-zero v1.4.0
 	github.com/zeromicro/zero-contrib/zrpc/registry/nacos v0.0.0-20211027021815-8ff8a83a094e
 	github.com/zeromicro/zero-contrib/zrpc/registry/polaris v0.0.0-20211220161209-f345f99a9600
