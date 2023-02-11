@@ -3,7 +3,7 @@ module example
 go 1.18
 
 require (
-	github.com/sirupsen/logrus v1.8.1
+	github.com/sirupsen/logrus v1.9.0
 	github.com/zeromicro/go-zero v1.3.4
 	github.com/zeromicro/zero-contrib/logx/logrusx v0.0.0-20220604015126-80bd73b0c2a0
 )
@@ -17,6 +17,6 @@ require (
 	go.opentelemetry.io/otel v1.7.0 // indirect
 	go.opentelemetry.io/otel/trace v1.7.0 // indirect
 	go.uber.org/automaxprocs v1.5.1 // indirect
-	golang.org/x/sys v0.0.0-20220520151302-bc2c85ada10a // indirect
+	golang.org/x/sys v0.0.0-20220715151400-c0bba94af5f8 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 )
