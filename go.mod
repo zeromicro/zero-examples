@@ -3,7 +3,7 @@ module github.com/zeromicro/zero-examples
 go 1.17
 
 require (
-	github.com/dchest/siphash v1.2.2
+	github.com/dchest/siphash v1.2.3
 	github.com/globalsign/mgo v0.0.0-20181015135952-eeefdecb41b8
 	github.com/golang/protobuf v1.5.2
 	github.com/google/gops v0.3.26
