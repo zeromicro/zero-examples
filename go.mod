@@ -6,7 +6,7 @@ require (
 	github.com/dchest/siphash v1.2.3
 	github.com/globalsign/mgo v0.0.0-20181015135952-eeefdecb41b8
 	github.com/golang/protobuf v1.5.2
-	github.com/google/gops v0.3.26
+	github.com/google/gops v0.3.27
 	github.com/gorilla/websocket v1.5.0
 	github.com/nacos-group/nacos-sdk-go v1.0.9
 	github.com/stretchr/testify v1.8.1
@@ -90,7 +90,7 @@ require (
 	golang.org/x/crypto v0.0.0-20220622213112-05595931fe9d // indirect
 	golang.org/x/oauth2 v0.0.0-20210819190943-2bc19b11175f // indirect
 	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c // indirect
-	golang.org/x/sys v0.0.0-20220520151302-bc2c85ada10a // indirect
+	golang.org/x/sys v0.5.0 // indirect
 	golang.org/x/term v0.0.0-20210927222741-03fcf44c2211 // indirect
 	golang.org/x/text v0.3.7 // indirect
 	golang.org/x/time v0.0.0-20220411224347-583f2d630306 // indirect
