@@ -3,7 +3,7 @@ module example
 go 1.18
 
 require (
-	github.com/rs/zerolog v1.29.0
+	github.com/rs/zerolog v1.29.1
 	github.com/zeromicro/go-zero v1.5.2
 	github.com/zeromicro/zero-contrib/logx/zerologx v0.0.0-20220702160639-bbe8e8ed0d6d
 )
