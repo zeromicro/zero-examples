@@ -7,7 +7,7 @@ require (
 	github.com/alicebob/miniredis/v2 v2.30.2
 	github.com/golang/mock v1.6.0
 	github.com/golang/protobuf v1.5.3
-	github.com/stretchr/testify v1.8.2
+	github.com/stretchr/testify v1.8.3
 	github.com/zeromicro/go-zero v1.5.2
 	golang.org/x/net v0.9.0
 	google.golang.org/grpc v1.54.0
