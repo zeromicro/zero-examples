@@ -9,6 +9,6 @@ require (
 	github.com/golang/protobuf v1.5.3
 	github.com/stretchr/testify v1.8.3
 	github.com/zeromicro/go-zero v1.5.2
-	golang.org/x/net v0.9.0
+	golang.org/x/net v0.12.0
 	google.golang.org/grpc v1.56.2
 )
