@@ -768,8 +768,8 @@ github.com/yuin/goldmark v1.2.1/go.mod h1:3hX8gzYuyVAZsxl0MRgGTJEmQBFcNTphYh9dec
 github.com/yuin/goldmark v1.3.5/go.mod h1:mwnBkeHKe2W/ZEtQ+71ViKU8L12m81fl3OWwC1Zlc8k=
 github.com/yuin/goldmark v1.4.13/go.mod h1:6yULJ656Px+3vBD8DxQVa3kxgyrAnzto9xy5taEt/CY=
 github.com/yuin/gopher-lua v0.0.0-20220504180219-658193537a64/go.mod h1:GBR0iDaNXjAgGg9zfCvksxSRnQx76gclCIb7kdAd1Pw=
-github.com/zeromicro/go-zero v1.4.4 h1:J8M768EVFNtIQJ/GCEsoIQPanxbx2HHT0it7r69U76Y=
-github.com/zeromicro/go-zero v1.4.4/go.mod h1:5WSUwtJm0bYdDZ69GlckigcT6D0EyAPbDaX3unbSY/4=
+github.com/zeromicro/go-zero v1.4.5 h1:lWS4cx1xOu9fzLKI/+Efh/o1cy5scO8B58Xxcz4aXrs=
+github.com/zeromicro/go-zero v1.4.5/go.mod h1:5WSUwtJm0bYdDZ69GlckigcT6D0EyAPbDaX3unbSY/4=
 github.com/zeromicro/zero-contrib/logx/logrusx v0.0.0-20220604015126-80bd73b0c2a0 h1:gftA5CZ/liYyOySo/8G4nlCG8qMU8w3bOBQ52SHK+P0=
 github.com/zeromicro/zero-contrib/logx/logrusx v0.0.0-20220604015126-80bd73b0c2a0/go.mod h1:OUZ40TbI9yhUw+sJpwLxO0IiOHdn2HcX8m1Rwprkc6U=
 go.etcd.io/etcd/api/v3 v3.5.5/go.mod h1:KFtNaxGDw4Yx/BA4iPPwevUTAuqcsPxzyX8PHydchN8=
