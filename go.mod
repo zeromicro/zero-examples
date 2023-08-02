@@ -14,7 +14,7 @@ require (
 	github.com/zeromicro/zero-contrib/zrpc/registry/nacos v0.0.0-20211027021815-8ff8a83a094e
 	github.com/zeromicro/zero-contrib/zrpc/registry/polaris v0.0.0-20211220161209-f345f99a9600
 	go.mongodb.org/mongo-driver v1.12.0
-	golang.org/x/net v0.12.0
+	golang.org/x/net v0.13.0
 	google.golang.org/grpc v1.50.1
 	gopkg.in/cheggaaa/pb.v1 v1.0.28
 )
