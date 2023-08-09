@@ -4,7 +4,7 @@ go 1.15
 
 require (
 	github.com/DATA-DOG/go-sqlmock v1.5.0
-	github.com/alicebob/miniredis/v2 v2.30.4
+	github.com/alicebob/miniredis/v2 v2.30.5
 	github.com/golang/mock v1.6.0
 	github.com/golang/protobuf v1.5.3
 	github.com/stretchr/testify v1.8.4
