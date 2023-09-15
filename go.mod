@@ -6,7 +6,7 @@ require (
 	github.com/dchest/siphash v1.2.3
 	github.com/globalsign/mgo v0.0.0-20181015135952-eeefdecb41b8
 	github.com/golang/protobuf v1.5.3
-	github.com/google/gops v0.3.27
+	github.com/google/gops v0.3.28
 	github.com/gorilla/websocket v1.5.0
 	github.com/nacos-group/nacos-sdk-go v1.0.9
 	github.com/stretchr/testify v1.8.4
