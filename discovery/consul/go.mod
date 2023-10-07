@@ -5,7 +5,7 @@ go 1.17
 require (
 	github.com/zeromicro/zero-contrib/zrpc/registry/consul v0.0.0-20211220161209-f345f99a9600
 	github.com/zeromicro/zero-examples v0.0.0-20211223140948-4edaf420eea5
-	google.golang.org/grpc v1.58.1
+	google.golang.org/grpc v1.58.2
 )
 
 require (
