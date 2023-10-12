@@ -1,11 +1,9 @@
 Name: shorturl-api
 Host: 0.0.0.0
-Port: 8888
+Port: 7777
 Transform:
-  Etcd:
-    Hosts:
-      - localhost:2379
-    Key: transform.rpc
-Telemetry:
-  Endpoint: http://localhost:14268/api/traces
-  Batcher: jaeger
+  Target: direct:///localhost:8081
+  # Etcd:
+    # Hosts:
+      # - localhost:2379
+    # Key: transform.rpc

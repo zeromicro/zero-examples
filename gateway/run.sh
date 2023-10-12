@@ -1,20 +1,20 @@
- #!/bin/bash
+#!/bin/bash
+
 date
 {
     cmd="go run hello.go"
-    eval ${cmd}
+    eval "${cmd}"
 } &
 sleep 2
 {
     cmd="go run gateway.go"
-    eval ${cmd}
+    eval "${cmd}"
 } &
 sleep 2
 {
     cmd="go run client.go"
-     eval ${cmd}
+    eval "${cmd}"
 } &
   
- wait
- date 
-
+wait
+date

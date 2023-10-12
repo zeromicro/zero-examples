@@ -6,13 +6,12 @@ option go_package = "./hello";
 
 message Request {
     string ping = 1;
-  }
+}
   
-  message Response {
+message Response {
     string pong = 1;
-  }
+}
   
-  service Hello {
+service Hello {
     rpc Ping(Request) returns(Response);
-  }
-  
+}

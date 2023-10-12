@@ -28,7 +28,6 @@ func main() {
 		hello.RegisterHelloServer(grpcServer, server.NewHelloServer(ctx))
 
 		reflection.Register(grpcServer)
-
 	})
 	defer s.Stop()
 
