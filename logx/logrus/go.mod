@@ -4,7 +4,7 @@ go 1.18
 
 require (
 	github.com/sirupsen/logrus v1.9.3
-	github.com/zeromicro/go-zero v1.5.5
+	github.com/zeromicro/go-zero v1.5.6
 	github.com/zeromicro/zero-contrib/logx/logrusx v0.0.0-20220604015126-80bd73b0c2a0
 )
 
@@ -16,5 +16,5 @@ require (
 	go.opentelemetry.io/otel v1.14.0 // indirect
 	go.opentelemetry.io/otel/trace v1.14.0 // indirect
 	go.uber.org/automaxprocs v1.5.3 // indirect
-	golang.org/x/sys v0.11.0 // indirect
+	golang.org/x/sys v0.12.0 // indirect
 )
