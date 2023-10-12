@@ -15,7 +15,7 @@ require (
 	github.com/zeromicro/zero-contrib/zrpc/registry/polaris v0.0.0-20211220161209-f345f99a9600
 	go.mongodb.org/mongo-driver v1.12.1
 	golang.org/x/net v0.15.0
-	google.golang.org/grpc v1.58.2
+	google.golang.org/grpc v1.58.3
 	gopkg.in/cheggaaa/pb.v1 v1.0.28
 )
 
