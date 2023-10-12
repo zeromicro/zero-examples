@@ -22,14 +22,14 @@ func main() {
 		allFriends []string
 		lock       sync.Mutex
 	)
-	mr.ForEach(func(source chan<- interface{}) {
+	mr.ForEach(func(source chan<- string) {
 		for _, each := range persons {
 			source <- each
 		}
-	}, func(item interface{}) {
+	}, func(item string) {
 		lock.Lock()
 		defer lock.Unlock()
-		allFriends = append(allFriends, friends[item.(string)]...)
+		allFriends = append(allFriends, friends[item]...)
 	}, mr.WithWorkers(100))
 	fmt.Println(allFriends)
 }

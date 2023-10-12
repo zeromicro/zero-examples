@@ -79,12 +79,12 @@ func productDetail(uid, pid int64) (*ProductDetail, error) {
 }
 
 func checkLegal(uids []int64) ([]int64, error) {
-	r, err := mr.MapReduce(func(source chan<- interface{}) {
+	r, err := mr.MapReduce(func(source chan<- int64) {
 		for _, uid := range uids {
 			source <- uid
 		}
-	}, func(item interface{}, writer mr.Writer, cancel func(error)) {
-		uid := item.(int64)
+	}, func(item int64, writer mr.Writer[int64], cancel func(error)) {
+		uid := item
 		ok, err := check(uid)
 		if err != nil {
 			cancel(err)
@@ -92,10 +92,10 @@ func checkLegal(uids []int64) ([]int64, error) {
 		if ok {
 			writer.Write(uid)
 		}
-	}, func(pipe <-chan interface{}, writer mr.Writer, cancel func(error)) {
+	}, func(pipe <-chan int64, writer mr.Writer[[]int64], cancel func(error)) {
 		var uids []int64
 		for p := range pipe {
-			uids = append(uids, p.(int64))
+			uids = append(uids, p)
 		}
 		writer.Write(uids)
 	})
@@ -103,7 +103,7 @@ func checkLegal(uids []int64) ([]int64, error) {
 		return nil, err
 	}
 
-	return r.([]int64), nil
+	return r, nil
 }
 
 func check(uid int64) (bool, error) {

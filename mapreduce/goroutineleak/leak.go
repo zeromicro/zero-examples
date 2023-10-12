@@ -47,20 +47,20 @@ func main() {
 		case <-done:
 			return
 		default:
-			mr.MapReduce(func(source chan<- interface{}) {
+			mr.MapReduce(func(source chan<- int) {
 				for i := 0; i < 100; i++ {
 					source <- i
 				}
-			}, func(item interface{}, writer mr.Writer, cancel func(error)) {
-				if item.(int) == 40 {
+			}, func(item int, writer mr.Writer[int], cancel func(error)) {
+				if item == 40 {
 					cancel(errors.New("any"))
 					return
 				}
 				writer.Write(item)
-			}, func(pipe <-chan interface{}, writer mr.Writer, cancel func(error)) {
+			}, func(pipe <-chan int, writer mr.Writer[[]int], cancel func(error)) {
 				list := make([]int, 0)
 				for p := range pipe {
-					list = append(list, p.(int))
+					list = append(list, p)
 				}
 				writer.Write(list)
 			})

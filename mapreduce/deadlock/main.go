@@ -14,18 +14,18 @@ type User struct {
 
 func main() {
 	uids := []int{111, 222, 333}
-	res, err := mr.MapReduce(func(source chan<- interface{}) {
+	res, err := mr.MapReduce(func(source chan<- int) {
 		for _, uid := range uids {
 			source <- uid
 		}
-	}, func(item interface{}, writer mr.Writer, cancel func(error)) {
-		uid := item.(int)
+	}, func(item int, writer mr.Writer[*User], cancel func(error)) {
+		uid := item
 		user := &User{
 			Uid:  uid,
 			Name: strconv.Itoa(uid),
 		}
 		writer.Write(user)
-	}, func(pipe <-chan interface{}, writer mr.Writer, cancel func(error)) {
+	}, func(pipe <-chan *User, writer mr.Writer[any], cancel func(error)) {
 		// missing writer.Write(...), should not panic
 	})
 	if err != nil {
