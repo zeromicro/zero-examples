@@ -13,7 +13,7 @@ require (
 	github.com/zeromicro/go-zero v1.5.6
 	github.com/zeromicro/zero-contrib/zrpc/registry/nacos v0.0.0-20211027021815-8ff8a83a094e
 	github.com/zeromicro/zero-contrib/zrpc/registry/polaris v0.0.0-20211220161209-f345f99a9600
-	go.mongodb.org/mongo-driver v1.12.1
+	go.mongodb.org/mongo-driver v1.13.1
 	golang.org/x/net v0.15.0
 	google.golang.org/grpc v1.58.2
 	gopkg.in/cheggaaa/pb.v1 v1.0.28
