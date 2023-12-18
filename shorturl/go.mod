@@ -10,5 +10,5 @@ require (
 	github.com/stretchr/testify v1.8.4
 	github.com/zeromicro/go-zero v1.5.4
 	golang.org/x/net v0.16.0
-	google.golang.org/grpc v1.58.1
+	google.golang.org/grpc v1.60.1
 )
