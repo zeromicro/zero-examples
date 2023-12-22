@@ -5,7 +5,7 @@ go 1.19
 require (
 	github.com/zeromicro/go-zero v1.5.4
 	google.golang.org/grpc v1.58.1
-	google.golang.org/protobuf v1.31.0
+	google.golang.org/protobuf v1.32.0
 )
 
 require (
