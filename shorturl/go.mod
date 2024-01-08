@@ -3,7 +3,7 @@ module shorturl
 go 1.15
 
 require (
-	github.com/DATA-DOG/go-sqlmock v1.5.0
+	github.com/DATA-DOG/go-sqlmock v1.5.2
 	github.com/alicebob/miniredis/v2 v2.30.4
 	github.com/golang/mock v1.6.0
 	github.com/golang/protobuf v1.5.3
