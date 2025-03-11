@@ -5,7 +5,7 @@ go 1.18
 require (
 	github.com/dchest/siphash v1.2.3
 	github.com/globalsign/mgo v0.0.0-20181015135952-eeefdecb41b8
-	github.com/golang/protobuf v1.5.3
+	github.com/golang/protobuf v1.5.4
 	github.com/google/gops v0.3.28
 	github.com/gorilla/websocket v1.5.0
 	github.com/nacos-group/nacos-sdk-go v1.0.9
@@ -114,7 +114,7 @@ require (
 	google.golang.org/genproto v0.0.0-20230803162519-f966b187b2e5 // indirect
 	google.golang.org/genproto/googleapis/api v0.0.0-20230726155614-23370e0ffb3e // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20230913181813-007df8e322eb // indirect
-	google.golang.org/protobuf v1.31.0 // indirect
+	google.golang.org/protobuf v1.33.0 // indirect
 	gopkg.in/inf.v0 v0.9.1 // indirect
 	gopkg.in/ini.v1 v1.42.0 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
