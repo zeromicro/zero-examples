@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SSE Example</title>
+</head>
+<body>
+    <h1>Server-Sent Events Demo</h1>
+    <div id="events"></div>
+
+    <script>
+        const eventList = document.getElementById('events');
+        // Connect to the SSE endpoint on the same server
+        const source = new EventSource('/sse');
+
+        source.onmessage = function(event) {
+            const newElement = document.createElement("p");
+            newElement.textContent = event.data;
+            eventList.appendChild(newElement);
+        };
+
+        source.onerror = function() {
+            console.log("Error occurred");
+        };
+    </script>
+</body>
+</html>
