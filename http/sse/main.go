@@ -22,6 +22,7 @@ func NewSseHandler() *SseHandler {
 // Serve handles the SSE connection
 func (h *SseHandler) Serve(w http.ResponseWriter, r *http.Request) {
 	// Set necessary headers for SSE
+	// for versions <= v1.8.1, no need for versions > v1.8.1
 	w.Header().Add("Content-Type", "text/event-stream")
 	w.Header().Add("Cache-Control", "no-cache")
 	w.Header().Add("Connection", "keep-alive")
@@ -86,6 +87,13 @@ func main() {
 		Path:    "/sse",
 		Handler: sseHandler.Serve,
 	}, rest.WithTimeout(0))
+
+	// for versions > v1.8.1
+	// server.AddRoute(rest.Route{
+	// 	Method:  http.MethodGet,
+	// 	Path:    "/sse",
+	// 	Handler: sseHandler.Serve,
+	// }, rest.WithSSE())
 
 	// Start event simulator in a separate goroutine
 	go sseHandler.SimulateEvents()
