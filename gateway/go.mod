@@ -1,11 +1,12 @@
 module zero-examples/gateway
 
 go 1.19
+toolchain go1.24.1
 
 require (
 	github.com/zeromicro/go-zero v1.5.4
 	google.golang.org/grpc v1.58.1
-	google.golang.org/protobuf v1.31.0
+	google.golang.org/protobuf v1.36.6
 )
 
 require (
