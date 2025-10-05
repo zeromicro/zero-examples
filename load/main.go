@@ -35,9 +35,13 @@ var (
 	avgFlyingBoth       float64
 	bothLock            syncx.SpinLock
 	lessWriter          *executors.LessExecutor
-	passCounter         = collection.NewRollingWindow(50, time.Millisecond*100)
-	rtCounter           = collection.NewRollingWindow(50, time.Millisecond*100)
-	index               int32
+	passCounter         = collection.NewRollingWindow(func() *collection.Bucket[float64] {
+		return new(collection.Bucket[float64])
+	}, 50, time.Millisecond*100)
+	rtCounter = collection.NewRollingWindow(func() *collection.Bucket[float64] {
+		return new(collection.Bucket[float64])
+	}, 50, time.Millisecond*100)
+	index int32
 )
 
 func main() {
@@ -121,7 +125,7 @@ func maxFlight() int64 {
 func maxPass() int64 {
 	var result float64 = 1
 
-	passCounter.Reduce(func(b *collection.Bucket) {
+	passCounter.Reduce(func(b *collection.Bucket[float64]) {
 		if b.Sum > result {
 			result = b.Sum
 		}
@@ -133,7 +137,7 @@ func maxPass() int64 {
 func minRt() float64 {
 	var result float64 = 1000
 
-	rtCounter.Reduce(func(b *collection.Bucket) {
+	rtCounter.Reduce(func(b *collection.Bucket[float64]) {
 		if b.Count <= 0 {
 			return
 		}

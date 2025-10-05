@@ -32,6 +32,11 @@ func (w *MultiWriter) Close() error {
 	return w.writer.Close()
 }
 
+func (w *MultiWriter) Debug(v interface{}, fields ...logx.LogField) {
+	w.consoleWriter.Debug(v, fields...)
+	w.writer.Debug(v, fields...)
+}
+
 func (w *MultiWriter) Error(v interface{}, fields ...logx.LogField) {
 	w.consoleWriter.Error(v, fields...)
 	w.writer.Error(v, fields...)
